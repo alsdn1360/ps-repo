@@ -1,3 +1,6 @@
+MAX_N = 30
+
+
 def solve(w, h):
     if w == 0:
         return 1
@@ -18,13 +21,13 @@ def solve(w, h):
 
 
 # main
+drugs = [[0 for _ in range(MAX_N + 1)] for _ in range(MAX_N + 1)]
+
 while True:
     n = int(input())
 
     if n == 0:
         break
-
-    drugs = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
 
     answer = solve(n, 0)
 
