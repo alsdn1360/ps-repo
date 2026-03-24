@@ -9,20 +9,7 @@ def in_bound(nx, ny):
     return 0 <= nx < n and 0 <= ny < n
 
 
-def is_continue(x, y):
-    for dx, dy in MOVES:
-        nx, ny = x + dx, y + dy
-
-        if in_bound(nx, ny) and bamboo[x][y] < bamboo[nx][ny]:
-            return True
-
-    return False
-
-
 def dfs(x, y):
-    if not is_continue(x, y):
-        return 1
-
     if dp[x][y] > 1:
         return dp[x][y]
 
